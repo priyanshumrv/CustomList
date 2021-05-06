@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,19 +45,55 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position ==  0) {
-                    Toast.makeText(MainActivity.this, "Facebook Description", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), AnotherActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("image", images[0]);
+                    intent.putExtras(bundle);
+                    intent.putExtra("title", mTitle[0]);
+                    intent.putExtra("description", mDescription[0]);
+                    intent.putExtra("position", ""+0);
+                    startActivity(intent);
+
                 }
-                if (position ==  0) {
-                    Toast.makeText(MainActivity.this, "Whatsapp Description", Toast.LENGTH_SHORT).show();
+                if (position ==  1) {
+                    Intent intent = new Intent(getApplicationContext(), AnotherActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("image", images[1]);
+                    intent.putExtras(bundle);
+                    intent.putExtra("title", mTitle[1]);
+                    intent.putExtra("description", mDescription[1]);
+                    intent.putExtra("position", ""+1);
+                    startActivity(intent);
                 }
-                if (position ==  0) {
-                    Toast.makeText(MainActivity.this, "Twitter Description", Toast.LENGTH_SHORT).show();
+                if (position ==  2) {
+                    Intent intent = new Intent(getApplicationContext(), AnotherActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("image", images[2]);
+                    intent.putExtras(bundle);
+                    intent.putExtra("title", mTitle[2]);
+                    intent.putExtra("description", mDescription[2]);
+                    intent.putExtra("position", ""+2);
+                    startActivity(intent);
                 }
-                if (position ==  0) {
-                    Toast.makeText(MainActivity.this, "Instagram Description", Toast.LENGTH_SHORT).show();
+                if (position ==  3) {
+                    Intent intent = new Intent(getApplicationContext(), AnotherActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("image", images[3]);
+                    intent.putExtras(bundle);
+                    intent.putExtra("title", mTitle[3]);
+                    intent.putExtra("description", mDescription[3]);
+                    intent.putExtra("position", ""+3);
+                    startActivity(intent);
                 }
-                if (position ==  0) {
-                    Toast.makeText(MainActivity.this, "Youtube Description", Toast.LENGTH_SHORT).show();
+                if (position ==  4) {
+                    Intent intent = new Intent(getApplicationContext(), AnotherActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("image", images[4]);
+                    intent.putExtras(bundle);
+                    intent.putExtra("title", mTitle[4]);
+                    intent.putExtra("description", mDescription[4]);
+                    intent.putExtra("position", ""+4);
+                    startActivity(intent);
                 }
             }
         });
